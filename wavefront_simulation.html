@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Six aberrations, each paired with its interference pattern.">
+  <meta name="theme-color" content="#eef3f2">
+  <title>Wavefront aberrations | Yuanzhang Yang</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="wordmark" href="index.html"><img src="mark.svg" width="30" height="30" alt=""><span>Yuanzhang Yang</span></a>
+    <nav aria-label="Main"><a href="index.html#projects">Projects</a><a href="https://github.com/muyi666111">GitHub</a></nav>
+  </div></header>
+  <main id="main" class="wrap detail">
+  <a class="back" href="index.html#projects">All projects</a>
+  <div class="detail-heading"><p class="eyebrow">Computational optics</p><h1>Wavefront aberrations</h1><p class="lede">I used MATLAB to sweep six aberrations across the same circular pupil. Each phase map sits beside its interferogram.</p></div>
+  <article class="research-content"><figure><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/wavefront/zernike_comparison.png"><img class="motion" src="assets/wavefront/zernike_sweep.gif" alt="Six aberrations with synchronized phase and interference-intensity maps" width="1220" height="657"></picture><figcaption>Defocus and spherical aberration produce rings with different radial spacing. Horizontal and vertical coma turn the paired lobes by 90°. Changing the astigmatism orientation rotates the fringe pattern by 45°.</figcaption></figure>
+<div class="links"><a href="assets/wavefront/zernike_comparison.png">Static comparison</a><a href="assets/wavefront/zernike_comparison.pdf">Print-ready comparison</a></div>
+<h2 id="forward-model">Forward model</h2>
+<p>The MATLAB script prescribes a phase difference Δφ = 2πcΔZ/λ across a 20 mm circular pupil, with wavelength λ = 632.8 nm and optical path scale Δ = 1 µm. Here c is the dimensionless coefficient and Z is the aberration polynomial used in the script. The interferogram is I = 2[1 + cos(Δφ)].</p>
+<p>At zero coefficient the pupil is uniformly bright. Reversing the coefficient reverses the phase map and leaves the intensity pattern unchanged because cosine is even. The sweep uses 40 original samples plus zero.</p>
+<div class="links"><a href="https://github.com/muyi666111/Wavefront-Sensing-Simulation">Original MATLAB project</a></div></article>
+  <nav class="next" aria-label="Project navigation"><a href="index.html#projects">All projects</a><a href="grating_couplers.html">Next project <strong>Grating couplers</strong></a></nav>
+</main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Yuanzhang Yang <span>·</span> Sun Yat-sen University</p><a href="https://github.com/muyi666111">GitHub</a></div></footer>
+</body>
+</html>

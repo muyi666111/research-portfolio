@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How coupling length changes which port carries the light.">
+  <meta name="theme-color" content="#eef3f2">
+  <title>SiN directional coupler | Yuanzhang Yang</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="wordmark" href="index.html"><img src="mark.svg" width="30" height="30" alt=""><span>Yuanzhang Yang</span></a>
+    <nav aria-label="Main"><a href="index.html#projects">Projects</a><a href="https://github.com/muyi666111">GitHub</a></nav>
+  </div></header>
+  <main id="main" class="wrap detail">
+  <a class="back" href="index.html#projects">All projects</a>
+  <div class="detail-heading"><p class="eyebrow">Waveguide coupling</p><h1>SiN directional coupler</h1><p class="lede">An eigenmode sweep set the gap at 300 nm. A 3D FDTD sweep then tested how the S-bends and straight section route power between the through and cross ports.</p></div>
+  <article class="research-content"><figure><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/directional_coupler/pulse_preview.png"><img class="motion" src="assets/directional_coupler/pulse.gif" alt="A simulated pulse transfers from the upper waveguide to the lower waveguide" width="1280" height="322"></picture><figcaption>A TE pulse in the upper guide couples into the lower guide as the gap narrows. Red and blue show the signed instantaneous E_y on a shared nonlinear scale. The straight section is 16 µm.</figcaption></figure>
+<div class="links"><a href="assets/directional_coupler/pulse_keyframes.png">Three key frames</a></div>
+<h2 id="selecting-the-gap-and-transitions">Selecting the gap and transitions</h2>
+<figure><a class="figure-link" href="assets/directional_coupler/gap_sweep.png" aria-label="Coupling length versus waveguide gap from the SiN eigenmode study (full size)"><img loading="lazy" src="assets/directional_coupler/gap_sweep.png" alt="Coupling length versus waveguide gap from the SiN eigenmode study" width="2817" height="1288"></a><figcaption>In the uniform cross-section, the even–odd mode splitting decreases with gap. The first full-transfer length rises from 17.33 µm at a 200 nm gap to 171.10 µm at 1000 nm. At the selected 300 nm gap, the uniform-section prediction is 23.55 µm.</figcaption></figure>
+<figure><a class="figure-link" href="assets/directional_coupler/layout.png" aria-label="SiN coupler layout and inset showing the S-bend shape (full size)"><img loading="lazy" src="assets/directional_coupler/layout.png" alt="SiN coupler layout and inset showing the S-bend shape" width="2730" height="1407"></a><figcaption>The archived layout uses a 12 µm straight section to illustrate the geometry. Each end uses a 13 µm transition. For that straight length, the simulated sum of the two output TE mode powers is 97.26% of the injected power.</figcaption></figure>
+<h2 id="routing-power-with-the-straight-section">Routing power with the straight section</h2>
+<figure><a class="figure-link" href="assets/directional_coupler/port_flux.png" aria-label="Through-port and cross-port simulated net flux versus straight coupling length (full size)"><img loading="lazy" src="assets/directional_coupler/port_flux.png" alt="Through-port and cross-port simulated net flux versus straight coupling length" width="2280" height="1240"></a><figcaption>At 1550 nm, the 16 µm case gives the highest sampled cross-port net flux, 98.35% of the injected power. Its cross-port fundamental TE mode carries 97.79%. At 36 µm, the through-port net flux reaches its sampled maximum of 97.05%.</figcaption></figure>
+<h3 id="where-the-field-goes">Where the field goes</h3>
+<figure><a class="figure-link" href="assets/directional_coupler/14_SB13_linear_fields_L000_L024.png" aria-label="Normalized field intensity for straight sections of 0–24 µm (full size)"><img loading="lazy" src="assets/directional_coupler/14_SB13_linear_fields_L000_L024.png" alt="Normalized field intensity for straight sections of 0–24 µm" width="2688" height="2268"></a></figure>
+<figure><a class="figure-link" href="assets/directional_coupler/15_SB13_linear_fields_L028_L048.png" aria-label="Normalized field intensity for straight sections of 28–48 µm (full size)"><img loading="lazy" src="assets/directional_coupler/15_SB13_linear_fields_L028_L048.png" alt="Normalized field intensity for straight sections of 28–48 µm" width="2688" height="1973"></a><figcaption>The brighter output switches from cross at 16 µm to through at 36 µm. All 13 layouts share a linear scale for normalized |E|². Gray marks the area outside the monitor.</figcaption></figure>
+<p>The S-bends also transfer power. The full-device sweep gives the straight length needed to reach each port.</p>
+<div class="links"><a href="assets/directional_coupler/gap_sweep.csv">Gap sweep CSV</a><a href="assets/directional_coupler/transition_summary.csv">Transition sweep CSV</a><a href="assets/directional_coupler/length_sweep.csv">Length sweep CSV</a></div>
+<p>The pulse replay uses the 16 µm layout and a 1500–1600 nm source. The power curves use the archived 1550 nm sweep.</p></article>
+  <nav class="next" aria-label="Project navigation"><a href="index.html#projects">All projects</a><a href="photonic_crystal_cavity.html">Next project <strong>InP photonic crystal cavity</strong></a></nav>
+</main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Yuanzhang Yang <span>·</span> Sun Yat-sen University</p><a href="https://github.com/muyi666111">GitHub</a></div></footer>
+</body>
+</html>

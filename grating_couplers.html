@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From a straight grating to a focusing design at 1550 nm.">
+  <meta name="theme-color" content="#eef3f2">
+  <title>Grating couplers | Yuanzhang Yang</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="wordmark" href="index.html"><img src="mark.svg" width="30" height="30" alt=""><span>Yuanzhang Yang</span></a>
+    <nav aria-label="Main"><a href="index.html#projects">Projects</a><a href="https://github.com/muyi666111">GitHub</a></nav>
+  </div></header>
+  <main id="main" class="wrap detail">
+  <a class="back" href="index.html#projects">All projects</a>
+  <div class="detail-heading"><p class="eyebrow">Silicon &amp; silicon nitride</p><h1>Grating couplers</h1><p class="lede">From a straight grating to a focusing design at 1550 nm.</p></div>
+  <article class="research-content"><div class="links"><a href="#designing-a-focusing-and-apodized-silicon-grating-coupler">Silicon design and optimization</a><a href="#silicon-nitride-grating-coupler">SiN parameter scans</a></div>
+<h2 id="designing-a-focusing-and-apodized-silicon-grating-coupler">Designing a focusing and apodized silicon grating coupler</h2>
+<p>I designed a shallow-etched silicon grating to couple 1550 nm light into a 500 nm waveguide. A lower peak and spectral ripple in the 3D straight-grating model motivated a focusing, apodized design.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Design and purpose</th><th scope="col">Simulated peak coupling</th><th scope="col">Peak wavelength</th></tr></thead><tbody><tr><td>2D straight grating to establish a starting geometry</td><td>69.2%</td><td>1550 nm</td></tr><tr><td>3D straight grating to test the finite-width device</td><td>40.5%</td><td>About 1560 nm</td></tr><tr><td>3D focusing and apodized grating to recover coupling near the target</td><td>55.5%</td><td>1550 nm</td></tr></tbody></table></div>
+<h3 id="electric-field-at-1550-nm">Electric field at 1550 nm</h3>
+<figure><a class="figure-link" href="assets/grating_coupler/silicon_focusing_1550.png" aria-label="Longitudinal and plan views of the focusing silicon grating at 1550 nm (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_focusing_1550.png" alt="Longitudinal and plan views of the focusing silicon grating at 1550 nm" width="3348" height="2376"></a><figcaption>3D FDTD field at 1550 nm. The longitudinal section shows the tilted incident field and the guided field. The plan view shows the field narrowing through the taper. Both panels share a normalized Re(E_y) scale.</figcaption></figure>
+<div class="links"><a href="assets/grating_coupler/silicon_focusing_1550.pdf">Print-ready field figure</a></div>
+<h3 id="what-changed-when-i-moved-to-3d">What changed when I moved to 3D</h3>
+<figure><a class="figure-link" href="assets/grating_coupler/silicon_2d_straight.png" aria-label="2D straight silicon grating. Reported spectrum and field map (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_2d_straight.png" alt="2D straight silicon grating. Reported spectrum and field map" width="1795" height="719"></a><figcaption>The 2D model has a smooth response near its 1550 nm peak. It is a longitudinal cross-section and omits the finite aperture and lateral spreading. Source is Fig. 3 of the unpublished technical report.</figcaption></figure>
+<figure><a class="figure-link" href="assets/grating_coupler/silicon_3d_straight.png" aria-label="3D straight silicon grating. Reported spectrum and field map (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_3d_straight.png" alt="3D straight silicon grating. Reported spectrum and field map" width="1735" height="756"></a><figcaption>The 3D straight grating exhibits visible spectral ripple and a lower peak near 1560 nm. The longitudinal field map contains structure above and below the guide. Source is Fig. 4 of the unpublished technical report.</figcaption></figure>
+<p>The archived straight-grating scripts use 654 nm (2D) and 660 nm (3D) periods.</p>
+<h3 id="how-i-redesigned-the-grating">How I redesigned the grating</h3>
+<p>I curved the grating to focus light toward the taper and varied the period (635–675 nm) and fill factor (0.72–0.41) to tune phase matching and scattering along the grating. The sixteen slots are etched 80 nm into a 220 nm silicon layer.</p>
+<figure><a class="figure-link" href="assets/grating_coupler/silicon_3d_focusing.png" aria-label="3D focusing and apodized silicon grating. Reported spectrum and field map (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_3d_focusing.png" alt="3D focusing and apodized silicon grating. Reported spectrum and field map" width="1749" height="751"></a><figcaption>The redesign peaks at 55.5% at 1550 nm, with a 61.05 nm 3 dB bandwidth and less ripple. The two 3D peaks differ by 15.0 percentage points and occur at different wavelengths. Field maps use separate scales. Source is Fig. 5 of the unpublished report.</figcaption></figure>
+<div class="links"><a href="https://github.com/muyi666111/Focusing_Apodized_Grating_Coupler">Silicon project report and Lumerical scripts</a></div>
+<h2 id="silicon-nitride-grating-coupler">Silicon nitride grating coupler</h2>
+<p>This 2D FDTD study varied the period, fill factor and external incidence angle one at a time. The plots below are the archived figures from the SiN project.</p>
+<h3 id="period-fill-factor-and-incidence-angle">Period, fill factor and incidence angle</h3>
+<figure><a class="figure-link" href="assets/grating_coupler/Period_spectra_1400_1650.png" aria-label="Original SiN transmission spectra for the period sweep (full size)"><img loading="lazy" src="assets/grating_coupler/Period_spectra_1400_1650.png" alt="Original SiN transmission spectra for the period sweep" width="4260" height="2550"></a></figure>
+<figure><a class="figure-link" href="assets/grating_coupler/FillFactor_spectra_1400_1650.png" aria-label="Original SiN transmission spectra for the fill factor sweep (full size)"><img loading="lazy" src="assets/grating_coupler/FillFactor_spectra_1400_1650.png" alt="Original SiN transmission spectra for the fill factor sweep" width="4260" height="2550"></a></figure>
+<figure><a class="figure-link" href="assets/grating_coupler/Angle_spectra_1400_1650.png" aria-label="Original SiN transmission spectra for the incidence angle sweep (full size)"><img loading="lazy" src="assets/grating_coupler/Angle_spectra_1400_1650.png" alt="Original SiN transmission spectra for the incidence angle sweep" width="4260" height="2550"></a><figcaption>Each curve shows the net waveguide transmission spectrum for one parameter setting. Comparing the sampled maxima over 1400–1650 nm led to a period of 1290 nm, a fill factor of 0.50 and an external incidence angle of 20°.</figcaption></figure>
+<h3 id="field-and-spectral-verification">Field and spectral verification</h3>
+<figure><a class="figure-link" href="assets/grating_coupler/sin_archive_field_1550.png" aria-label="Original SiN grating field maps at 1550 nm (full size)"><img loading="lazy" src="assets/grating_coupler/sin_archive_field_1550.png" alt="Original SiN grating field maps at 1550 nm" width="4260" height="2040"></a><figcaption>The archived field figure shows the real out-of-plane electric field and total electric-field magnitude squared at 1550 nm.</figcaption></figure>
+<figure><a class="figure-link" href="assets/grating_coupler/sin_spectrum.png" aria-label="Original SiN grating transmission spectrum (full size)"><img loading="lazy" src="assets/grating_coupler/sin_spectrum.png" alt="Original SiN grating transmission spectrum" width="4260" height="2460"></a><figcaption>In the independent validation run, net waveguide transmission peaks at 41.16% at 1526.67 nm and is 34.61% at the 1550 nm design wavelength.</figcaption></figure></article>
+  <nav class="next" aria-label="Project navigation"><a href="index.html#projects">All projects</a><a href="microring.html">Next project <strong>Silicon microring resonator</strong></a></nav>
+</main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Yuanzhang Yang <span>·</span> Sun Yat-sen University</p><a href="https://github.com/muyi666111">GitHub</a></div></footer>
+</body>
+</html>
