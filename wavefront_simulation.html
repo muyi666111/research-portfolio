@@ -8,6 +8,10 @@
   <title>Wavefront aberrations | Yuanzhang Yang</title>
   <link rel="icon" type="image/svg+xml" href="mark.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <script defer src="vendor/katex/katex.min.js"></script>
+  <script defer src="vendor/katex/auto-render.min.js"></script>
+  <script defer src="math.js"></script>
 </head>
 <body class="project-page">
   <a class="skip" href="#main">Skip to content</a>
@@ -21,8 +25,14 @@
   <article class="research-content"><figure><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/wavefront/zernike_comparison.png"><img class="motion" src="assets/wavefront/zernike_sweep.gif" alt="Six aberrations with synchronized phase and interference-intensity maps" width="1220" height="657"></picture><figcaption>Defocus and spherical aberration produce rings with different radial spacing. Horizontal and vertical coma turn the paired lobes by 90°. Changing the astigmatism orientation rotates the fringe pattern by 45°.</figcaption></figure>
 <div class="links"><a href="assets/wavefront/zernike_comparison.png">Static comparison</a><a href="assets/wavefront/zernike_comparison.pdf">Print-ready comparison</a></div>
 <h2 id="forward-model">Forward model</h2>
-<p>The MATLAB script prescribes a phase difference Δφ = 2πcΔZ/λ across a 20 mm circular pupil, with wavelength λ = 632.8 nm and optical path scale Δ = 1 µm. Here c is the dimensionless coefficient and Z is the aberration polynomial used in the script. The interferogram is I = 2[1 + cos(Δφ)].</p>
-<p>At zero coefficient the pupil is uniformly bright. Reversing the coefficient reverses the phase map and leaves the intensity pattern unchanged because cosine is even. The sweep uses 40 original samples plus zero.</p>
+<p>The MATLAB model applies one aberration at a time across a 20 mm pupil. I used a wavelength of \(632.8\,\mathrm{nm}\) and an optical path scale of \(\Delta=1\,\mu\mathrm{m}\).</p>
+<div class="math-display">$$
+\begin{aligned}
+\Delta\phi(\rho,\theta) &amp;= \frac{2\pi}{\lambda}\,c\,\Delta\,Z(\rho,\theta),\\
+I(\rho,\theta) &amp;= 2\bigl[1+\cos\bigl(\Delta\phi(\rho,\theta)\bigr)\bigr].
+\end{aligned}
+$$</div>
+<p>Here \(\rho\) is normalized radius, \(\theta\) is azimuth, \(c\) is the swept coefficient, and \(Z\) is the aberration polynomial. When \(c=0\), the pupil is uniformly bright. Reversing \(c\) flips the phase and reproduces the same intensity pattern because cosine is even.</p>
 <div class="links"><a href="https://github.com/muyi666111/Wavefront-Sensing-Simulation">Original MATLAB project</a></div></article>
   <nav class="next" aria-label="Project navigation"><a href="index.html#projects">All projects</a><a href="grating_couplers.html">Next project <strong>Grating couplers</strong></a></nav>
 </main>

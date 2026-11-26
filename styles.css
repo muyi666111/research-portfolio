@@ -11,3 +11,6 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 picture{display:block}.research-content figure img.motion{max-height:75vh;object-fit:contain}
+.math-display{overflow-x:auto;margin:1rem 0 1.3rem;padding:.35rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.math-display .katex-display{margin:.65rem 0}
+.this-work td{background:#e0efea;color:#153c3b;font-weight:700}

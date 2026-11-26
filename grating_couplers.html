@@ -8,6 +8,10 @@
   <title>Grating couplers | Yuanzhang Yang</title>
   <link rel="icon" type="image/svg+xml" href="mark.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <script defer src="vendor/katex/katex.min.js"></script>
+  <script defer src="vendor/katex/auto-render.min.js"></script>
+  <script defer src="math.js"></script>
 </head>
 <body class="project-page">
   <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +28,6 @@
 <div class="table-wrap"><table><thead><tr><th scope="col">Design and purpose</th><th scope="col">Simulated peak coupling</th><th scope="col">Peak wavelength</th></tr></thead><tbody><tr><td>2D straight grating to establish a starting geometry</td><td>69.2%</td><td>1550 nm</td></tr><tr><td>3D straight grating to test the finite-width device</td><td>40.5%</td><td>About 1560 nm</td></tr><tr><td>3D focusing and apodized grating to recover coupling near the target</td><td>55.5%</td><td>1550 nm</td></tr></tbody></table></div>
 <h3 id="electric-field-at-1550-nm">Electric field at 1550 nm</h3>
 <figure><a class="figure-link" href="assets/grating_coupler/silicon_focusing_1550.png" aria-label="Longitudinal and plan views of the focusing silicon grating at 1550 nm (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_focusing_1550.png" alt="Longitudinal and plan views of the focusing silicon grating at 1550 nm" width="3348" height="2376"></a><figcaption>3D FDTD field at 1550 nm. The longitudinal section shows the tilted incident field and the guided field. The plan view shows the field narrowing through the taper. Both panels share a normalized Re(E_y) scale.</figcaption></figure>
-<div class="links"><a href="assets/grating_coupler/silicon_focusing_1550.pdf">Print-ready field figure</a></div>
 <h3 id="what-changed-when-i-moved-to-3d">What changed when I moved to 3D</h3>
 <figure><a class="figure-link" href="assets/grating_coupler/silicon_2d_straight.png" aria-label="2D straight silicon grating. Reported spectrum and field map (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_2d_straight.png" alt="2D straight silicon grating. Reported spectrum and field map" width="1795" height="719"></a><figcaption>The 2D model has a smooth response near its 1550 nm peak. It is a longitudinal cross-section and omits the finite aperture and lateral spreading. Source is Fig. 3 of the unpublished technical report.</figcaption></figure>
 <figure><a class="figure-link" href="assets/grating_coupler/silicon_3d_straight.png" aria-label="3D straight silicon grating. Reported spectrum and field map (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_3d_straight.png" alt="3D straight silicon grating. Reported spectrum and field map" width="1735" height="756"></a><figcaption>The 3D straight grating exhibits visible spectral ripple and a lower peak near 1560 nm. The longitudinal field map contains structure above and below the guide. Source is Fig. 4 of the unpublished technical report.</figcaption></figure>
@@ -33,8 +36,21 @@
 <p>I curved the grating to focus light toward the taper and varied the period (635–675 nm) and fill factor (0.72–0.41) to tune phase matching and scattering along the grating. The sixteen slots are etched 80 nm into a 220 nm silicon layer.</p>
 <figure><a class="figure-link" href="assets/grating_coupler/silicon_3d_focusing.png" aria-label="3D focusing and apodized silicon grating. Reported spectrum and field map (full size)"><img loading="lazy" src="assets/grating_coupler/silicon_3d_focusing.png" alt="3D focusing and apodized silicon grating. Reported spectrum and field map" width="1749" height="751"></a><figcaption>The redesign peaks at 55.5% at 1550 nm, with a 61.05 nm 3 dB bandwidth and less ripple. The two 3D peaks differ by 15.0 percentage points and occur at different wavelengths. Field maps use separate scales. Source is Fig. 5 of the unpublished report.</figcaption></figure>
 <div class="links"><a href="https://github.com/muyi666111/Focusing_Apodized_Grating_Coupler">Silicon project report and Lumerical scripts</a></div>
+<h3 id="comparison-with-reported-grating-couplers">Comparison with reported grating couplers</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Coupler</th><th scope="col">Structure or process</th><th scope="col">Simulated peak (dB)</th><th scope="col">Measured peak (dB)</th><th scope="col">Bandwidth</th></tr></thead><tbody><tr><td>SOI + poly-Si overlay [3]</td><td>Deposited overlay</td><td>−1.0</td><td>−1.6</td><td>44 nm (1 dB)</td></tr><tr><td>SOI + Au bottom reflector [4]</td><td>Metal reflector and bonding</td><td>−1.1</td><td>−1.6</td><td>45 nm (1 dB)</td></tr><tr><td>SiN + DBR [5]</td><td>Multilayer reflector</td><td>−2.3</td><td>−2.5</td><td>53 nm (1 dB)</td></tr><tr><td>SiN + SOI grating reflector [6]</td><td>SOI reflector</td><td>−2.3</td><td>−1.3</td><td>80 nm (1 dB)</td></tr><tr><td>Duty-cycle-apodized SOI [7]</td><td>Apodization</td><td>—</td><td>−3.1</td><td>41 nm (1 dB)</td></tr><tr><td>Effective-index-apodized SOI SWG [8]</td><td>Subwavelength grating and apodization</td><td>−2.0</td><td>−2.2</td><td>64 nm (3 dB)</td></tr><tr><td>Dual-etch SOI SWG [9]</td><td>Two etch depths</td><td>−1.1</td><td>−1.3</td><td>52 nm (3 dB)</td></tr><tr><td>Slanted grating [10]</td><td>Slanted etch</td><td>−1.9</td><td>−3.4</td><td>80 nm (3 dB)</td></tr><tr class="this-work"><td>This work</td><td>Single shallow etch on SOI, focusing and apodized</td><td>−2.56</td><td>—</td><td>61.05 nm (3 dB)</td></tr></tbody></table></div>
+<p class="group-caption">Values follow Table 1 of the unpublished report. Bracketed numbers follow its reference list. Bandwidths are reported at the drop listed in each row.</p>
+<div class="links"><a href="https://github.com/muyi666111/Focusing_Apodized_Grating_Coupler/blob/main/Paper.pdf">Full report and references</a></div>
 <h2 id="silicon-nitride-grating-coupler">Silicon nitride grating coupler</h2>
-<p>This 2D FDTD study varied the period, fill factor and external incidence angle one at a time. The plots below are the archived figures from the SiN project.</p>
+<p>Moving from silicon to SiN changed both the layer and the grating. I switched from a 220 nm silicon layer with an 80 nm partial etch to a 300 nm SiN layer with a full etch. The lower effective index called for a longer period at the same target wavelength and external incidence angle.</p>
+<p>The FDTD model uses a 4.4 µm buried oxide. <a href="assets/grating_coupler/sin_cross_section.png">Layer-stack schematic</a></p>
+<p>I estimated the pitch using first-order phase matching. For the external angle in air, the grating index can be approximated by a fill-factor-weighted average of the tooth and slot indices.</p>
+<div class="math-display">$$
+\begin{aligned}
+\Lambda &amp;\approx \frac{\lambda_0}{n_{\mathrm{eff,GC}}-\sin\theta},\\
+n_{\mathrm{eff,GC}} &amp;\approx f n_{\mathrm{tooth}} + (1-f)n_{\mathrm{slot}}.
+\end{aligned}
+$$</div>
+<p>At \(\lambda_0=1550\,\mathrm{nm}\), \(\theta=20^\circ\), and \(f=0.50\), the SiN slab-mode and silica indices give \(n_{\mathrm{eff,GC}}\approx1.56\). The estimate moves the pitch from roughly 660 nm for silicon to 1272 nm for SiN. The 2D FDTD sweep selects 1290 nm.</p>
 <h3 id="period-fill-factor-and-incidence-angle">Period, fill factor and incidence angle</h3>
 <figure><a class="figure-link" href="assets/grating_coupler/Period_spectra_1400_1650.png" aria-label="Original SiN transmission spectra for the period sweep (full size)"><img loading="lazy" src="assets/grating_coupler/Period_spectra_1400_1650.png" alt="Original SiN transmission spectra for the period sweep" width="4260" height="2550"></a></figure>
 <figure><a class="figure-link" href="assets/grating_coupler/FillFactor_spectra_1400_1650.png" aria-label="Original SiN transmission spectra for the fill factor sweep (full size)"><img loading="lazy" src="assets/grating_coupler/FillFactor_spectra_1400_1650.png" alt="Original SiN transmission spectra for the fill factor sweep" width="4260" height="2550"></a></figure>
