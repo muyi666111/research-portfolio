@@ -14,3 +14,23 @@ picture{display:block}.research-content figure img.motion{max-height:75vh;object
 .math-display{overflow-x:auto;margin:1rem 0 1.3rem;padding:.35rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
 .math-display .katex-display{margin:.65rem 0}
 .this-work td{background:#e0efea;color:#153c3b;font-weight:700}
+.project-section{padding-bottom:3rem}
+.publication-home{border-top:1px solid var(--line);padding:1.75rem 0 4.5rem}
+.publication-home h2{font-size:clamp(2rem,3.1vw,3.25rem);margin-bottom:1.2rem}
+.publication-feature{display:block;background:var(--surface);padding:clamp(1.25rem,3vw,2.25rem);border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);text-decoration:none}
+.publication-feature:hover{border-color:#7b9d97;background:var(--paper)}
+.publication-feature h3{font-size:clamp(1.3rem,2.3vw,1.85rem);max-width:40ch;margin-top:.55rem}
+.publication-citation{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.2rem,4vw,2.6rem)}
+.publication-citation h2{font-size:clamp(1.75rem,4vw,3.15rem);max-width:32ch;margin:.7rem 0 1.2rem}
+.publication-authors,.publication-journal{color:var(--muted);margin-top:.4rem}
+.publication-authors strong{color:var(--ink)}
+.publication-citation .links{margin:1.3rem 0 0}
+.publication-content{margin-top:2rem}
+.publication-content h2{margin-top:1rem}
+.research-content .thermal-figure{padding:clamp(1rem,3vw,1.8rem);margin:1.6rem 0 0}
+.thermal-figure h3{margin:0 0 1rem}
+.thermal-steps{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.thermal-step{padding:1rem 1.2rem;background:#eaf2ef;border-radius:10px}
+.temperature{font-weight:750;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.1;margin:.5rem 0 .55rem;letter-spacing:-.04em}
+.temperature span{font-size:.54em;letter-spacing:0;font-weight:500}
+@media(max-width:650px){.thermal-steps{grid-template-columns:1fr}.header-inner{flex-wrap:wrap;gap:.5rem .8rem;padding:.65rem 0}.header nav{gap:.8rem}}
