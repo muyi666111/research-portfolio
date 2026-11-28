@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comparing straight, Z-shaped, and Ω-shaped interfaces.">
+  <meta name="theme-color" content="#eef3f2">
+  <title>Valley photonic crystal waveguide | Yuanzhang Yang</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="wordmark" href="index.html"><img src="mark.svg" width="30" height="30" alt=""><span>Yuanzhang Yang</span></a>
+    <nav aria-label="Main"><a href="index.html#projects">Projects</a><a href="publications.html">Publications</a><a href="experiments.html">Experiments</a><a href="https://github.com/muyi666111">GitHub</a></nav>
+  </div></header>
+  <main id="main" class="wrap detail">
+  <a class="back" href="photonic_crystals.html">Photonic crystals</a>
+  <div class="detail-heading"><p class="eyebrow">Dispersion &amp; FDTD</p><h1>Valley photonic crystal waveguide</h1><p class="lede">I modeled two honeycomb air-hole lattices with swapped hole diameters on a 220 nm silicon layer. Joining the two domains along their large holes forms an interface that guides light.</p></div>
+  <article class="research-content"><figure><a class="figure-link" href="assets/photonic_crystal/valley/interface_dispersion.png" aria-label="Dispersion of a valley photonic crystal interface supercell (full size)"><img loading="lazy" src="assets/photonic_crystal/valley/interface_dispersion.png" alt="Dispersion of a valley photonic crystal interface supercell" width="3214" height="1399"></a><figcaption>Guided-mode expansion identifies an interface branch near 1430 nm.</figcaption></figure>
+<h2 id="straight-and-bent-paths">Straight and bent paths</h2>
+<figure><a class="figure-link" href="assets/photonic_crystal/valley/valley_fields_1430.png" aria-label="Simulated electric intensity of straight, Z-shaped, and omega-shaped interfaces at 1430 nm (full size)"><img loading="lazy" src="assets/photonic_crystal/valley/valley_fields_1430.png" alt="Simulated electric intensity of straight, Z-shaped, and omega-shaped interfaces at 1430 nm" width="4135" height="1400"></a><figcaption>The three 2D FDTD maps use a common scale and are normalized to matched strip-waveguide incident power. The field follows the domain wall through each bend.</figcaption></figure>
+<figure><a class="figure-link" href="assets/photonic_crystal/valley/valley_spectra.png" aria-label="Simulated transmission and reflection of the three interfaces (full size)"><img loading="lazy" src="assets/photonic_crystal/valley/valley_spectra.png" alt="Simulated transmission and reflection of the three interfaces" width="3694" height="1399"></a><figcaption>At 1430 nm, the straight, Z-shaped, and Ω-shaped paths give relative through powers of 71.5%, 71.2%, and 63.4%, respectively, in the 2D effective-index model.</figcaption></figure>
+<p>A separate, finite-time 3D calculation with the physical silicon-on-insulator slab gave about 32% relative through power for the straight interface at 1430 nm. The 3D result shows how strongly the transmission estimate depends on the model.</p>
+<figure><a class="figure-link" href="assets/photonic_crystal/valley/straight_3d_field.png" aria-label="Three-dimensional field cross sections for the straight slab interface (full size)"><img loading="lazy" src="assets/photonic_crystal/valley/straight_3d_field.png" alt="Three-dimensional field cross sections for the straight slab interface" width="3626" height="1365"></a><figcaption>The straight-interface slab calculation resolves the field in the plane of the membrane and through its thickness.</figcaption></figure>
+<div class="links"><a href="https://doi.org/10.1038/s41467-019-08881-z">Reference design by He et al.</a></div></article>
+  <nav class="next" aria-label="Project navigation"><a href="photonic_crystals.html">Photonic crystals</a><a href="photonic_crystal_fisheye.html">Next project <strong>Maxwell fish-eye lens</strong></a></nav>
+</main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Yuanzhang Yang <span>·</span> Sun Yat-sen University</p><a href="https://github.com/muyi666111">GitHub</a></div></footer>
+</body>
+</html>

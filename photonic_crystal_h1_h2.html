@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resolving membrane resonances by mirror symmetry.">
+  <meta name="theme-color" content="#eef3f2">
+  <title>H1 and H2 defect cavities | Yuanzhang Yang</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="wordmark" href="index.html"><img src="mark.svg" width="30" height="30" alt=""><span>Yuanzhang Yang</span></a>
+    <nav aria-label="Main"><a href="index.html#projects">Projects</a><a href="publications.html">Publications</a><a href="experiments.html">Experiments</a><a href="https://github.com/muyi666111">GitHub</a></nav>
+  </div></header>
+  <main id="main" class="wrap detail">
+  <a class="back" href="photonic_crystals.html">Photonic crystals</a>
+  <div class="detail-heading"><p class="eyebrow">3D FDTD</p><h1>H1 and H2 defect cavities</h1><p class="lede">I used 3D FDTD to compare H1 and H2 cavities in a 260 nm suspended dielectric membrane with a 366 nm triangular lattice. H1 removes one central hole. H2 removes the center hole and its six nearest neighbors.</p></div>
+  <article class="research-content"><figure><a class="figure-link" href="assets/photonic_crystal/h1_h2/cavity_geometry.png" aria-label="H1 and H2 cavity geometry (full size)"><img loading="lazy" src="assets/photonic_crystal/h1_h2/cavity_geometry.png" alt="H1 and H2 cavity geometry" width="3034" height="2224"></a><figcaption>The two layouts use the same lattice and membrane. The missing holes define different defect regions.</figcaption></figure>
+<h2 id="separating-the-resonances">Separating the resonances</h2>
+<p>I simulated four combinations of in-plane mirror symmetry and used the resulting spectral peaks to place field monitors. This separates resonances that can overlap in a full-domain spectrum.</p>
+<figure><a class="figure-link" href="assets/photonic_crystal/h1_h2/figure_02_H2_symmetry_spectra.png" aria-label="H2 spectra resolved by mirror symmetry (full size)"><img loading="lazy" src="assets/photonic_crystal/h1_h2/figure_02_H2_symmetry_spectra.png" alt="H2 spectra resolved by mirror symmetry" width="2854" height="2434"></a><figcaption>Each spectrum corresponds to one pair of mirror boundary conditions. The marked peaks identify the frequencies used for field maps.</figcaption></figure>
+<figure><a class="figure-link" href="assets/photonic_crystal/h1_h2/figure_03_H2_modes_intensity.png" aria-label="Midplane electric intensity of the H2 cavity modes (full size)"><img loading="lazy" src="assets/photonic_crystal/h1_h2/figure_03_H2_modes_intensity.png" alt="Midplane electric intensity of the H2 cavity modes" width="3624" height="2623"></a><figcaption>The H2 modes occupy the same defect region but have different lobe patterns. Each intensity map is normalized to its own peak.</figcaption></figure>
+<p>For four modes in the antisymmetric–antisymmetric sector, increasing the mesh density from 15 to 20 points per lattice period changed the resonance frequencies by at most 0.16%. The ringdown Q of the E11 mode remained sensitive to the lateral domain size.</p>
+<div class="links"><a href="https://optics.ansys.com/hc/en-us/articles/360041567754-Photonic-crystal-cavity">Ansys cavity reference model</a></div></article>
+  <nav class="next" aria-label="Project navigation"><a href="photonic_crystals.html">Photonic crystals</a><a href="photonic_crystal_valley.html">Next project <strong>Valley photonic crystal waveguide</strong></a></nav>
+</main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Yuanzhang Yang <span>·</span> Sun Yat-sen University</p><a href="https://github.com/muyi666111">GitHub</a></div></footer>
+</body>
+</html>

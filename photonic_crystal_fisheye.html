@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Routing waveguide inputs to opposite ports.">
+  <meta name="theme-color" content="#eef3f2">
+  <title>Maxwell fish-eye lens | Yuanzhang Yang</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="wordmark" href="index.html"><img src="mark.svg" width="30" height="30" alt=""><span>Yuanzhang Yang</span></a>
+    <nav aria-label="Main"><a href="index.html#projects">Projects</a><a href="publications.html">Publications</a><a href="experiments.html">Experiments</a><a href="https://github.com/muyi666111">GitHub</a></nav>
+  </div></header>
+  <main id="main" class="wrap detail">
+  <a class="back" href="photonic_crystals.html">Photonic crystals</a>
+  <div class="detail-heading"><p class="eyebrow">2D FDTD</p><h1>Maxwell fish-eye lens</h1><p class="lede">I reconstructed a Maxwell fish-eye lens in 2D FDTD. A radial index profile brings light from an input port to the opposite side. In the discrete design, the rod radii or spacing approximate that profile.</p></div>
+  <article class="research-content"><figure><a class="figure-link" href="assets/photonic_crystal/fisheye/geometry.png" aria-label="Continuous and discrete lens layouts with four- and six-channel junctions (full size)"><img loading="lazy" src="assets/photonic_crystal/fisheye/geometry.png" alt="Continuous and discrete lens layouts with four- and six-channel junctions" width="3037" height="2954"></a><figcaption>The circular lens redirects light between missing-row waveguides in the surrounding square lattice.</figcaption></figure>
+<h2 id="routing-at-1550-nm">Routing at 1550 nm</h2>
+<figure><a class="figure-link" href="assets/photonic_crystal/fisheye/six_crossing_fields.png" aria-label="Field intensities for center and offset inputs of the six-channel junction (full size)"><img loading="lazy" src="assets/photonic_crystal/fisheye/six_crossing_fields.png" alt="Field intensities for center and offset inputs of the six-channel junction" width="3266" height="1609"></a><figcaption>Independent center and offset runs share an incident-power-normalized intensity scale. In both, the strongest output is the port opposite the input.</figcaption></figure>
+<figure><a class="figure-link" href="assets/photonic_crystal/fisheye/six_crossing_spectra.png" aria-label="Six-channel junction port spectra (full size)"><img loading="lazy" src="assets/photonic_crystal/fisheye/six_crossing_spectra.png" alt="Six-channel junction port spectra" width="3454" height="1279"></a><figcaption>At 1550 nm, the estimated opposite-port transmission is 45.1% for the center input and 67.3% for the offset input. The spectra also report estimated reflection and non-target port flux.</figcaption></figure>
+<p>The transmission estimates are sensitive to the simulation time and boundary treatment. Extending the center-input run from 0.68 to 0.95 ps reduced its source-normalized target flux by about 8%.</p>
+<div class="links"><a href="https://doi.org/10.1016/j.photonics.2018.08.001">Reference design by Gilarlue et al.</a></div></article>
+  <nav class="next" aria-label="Project navigation"><a href="photonic_crystals.html">Photonic crystals</a><a href="photonic_crystal_beam.html">Next project <strong>Photonic crystal beam steering and splitting</strong></a></nav>
+</main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Yuanzhang Yang <span>·</span> Sun Yat-sen University</p><a href="https://github.com/muyi666111">GitHub</a></div></footer>
+</body>
+</html>
